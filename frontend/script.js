@@ -8,10 +8,12 @@ async function fetchBeers(){
 function cardComponent({title, sub, text}, buttonText, key){
     return `
         <div class="beer">
-            <div class="circle">${key}<div>
+            <div class="circle">${key}</div>
             <h2>${title}</h2>
-            <h3>${sub}<h3>
-            <h4>${text}<h4>
+            <div class="details">
+                <h3>${sub}<h3>
+                <h4>${text}<h4>
+            </div>
             <button>
                 <span class="material-icons">arrow forward</span>
                 ${buttonText}
@@ -23,7 +25,7 @@ function cardComponent({title, sub, text}, buttonText, key){
 function beers(beers, buttonText){
     return `
         <section class="beers">
-            ${beers.map((beer, index) => cardComponent(beer, buttonText, index)).join('')}
+            ${beers.map((beer, index) => cardComponent(beer, buttonText, index+1)).join('')}
         </section>
     `;
 }
