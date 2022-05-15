@@ -28,11 +28,23 @@ function beers(beers, buttonText){
     `;
 }
 
+function header(){
+    return `
+        <header>
+            <h2>Best Beers<h2>
+            <button>
+                <h2><span class="material-icons">menu</span><h2>
+            </button>
+        </header>
+    `;
+}
+
 async function loadEvent(){
     // const citiesData = await fetch("cities/city.list.json");
     const beersData = await fetchBeers();
 
     const rootElement = document.getElementById("root");
+    rootElement.insertAdjacentHTML('beforeend', header());
     rootElement.insertAdjacentHTML('beforeend', beers(beersData.cards, beersData.button));
 
 }
