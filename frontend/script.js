@@ -22,7 +22,7 @@ function cardComponent({title, sub, text}, buttonText, key){
 
 function beers(beers, buttonText){
     return `
-        <section>
+        <section class="beers">
             ${beers.map((beer, index) => cardComponent(beer, buttonText, index)).join('')}
         </section>
     `;
@@ -31,7 +31,7 @@ function beers(beers, buttonText){
 function header(){
     return `
         <header>
-            <h2>Best Beers<h2>
+            <h2 class="title">Best Beers<h2>
             <button>
                 <h2><span class="material-icons">menu</span><h2>
             </button>
