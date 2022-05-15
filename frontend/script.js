@@ -11,13 +11,13 @@ function cardComponent({title, sub, text}, buttonText, key){
             <div class="circle">${key}</div>
             <h2>${title}</h2>
             <div class="details">
-                <h3>${sub}<h3>
-                <h4>${text}<h4>
+                <h3>${sub}</h3>
+                <h4>${text}</h4>
             </div>
-            <button>
+            <div class="button">
+                <div>${buttonText}</div>
                 <span class="material-icons">arrow forward</span>
-                ${buttonText}
-            </button>
+            </div>
         </div>
     `;
 }
