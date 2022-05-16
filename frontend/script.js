@@ -70,8 +70,8 @@ async function fetchBeers(){
 
 function cardComponent({title, sub, text}, buttonText, key){
     return `
-        <div class="beer">
-            <div class="circle">${key}</div>
+        <div class="beer" data-key="${key}">
+            <!--<div class="circle">${key}</div>-->            
             <h2>${title}</h2>
             <div class="details">
                 <h3>${sub}</h3>

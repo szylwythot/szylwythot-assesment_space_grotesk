@@ -25,20 +25,26 @@ header{
     height: 60px;
 
     position: fixed;
+    top:0;
+    z-index: 99;
 
-    /* display: flex; */
+    background-color: var(--primary);
 
-    /* padding: 20px; */
     border-bottom: var(--secondary) 1px solid;
+
+    /* display: flex;
+    justify-content: space-between;
+    padding: 10px; */
 }
 
 
 header h2.title {
     position: absolute;
-    font-size: 36px;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
+    
+    font-size: 36px;
 }
 
 header button {
@@ -54,21 +60,24 @@ header button h2 span.material-icons{ /*need to change font size*/
 }
 
 section.beers{
-    position: relative;
+    /* position: relative;
     top: 120px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     
     max-width: 1200px;
-    min-width: 420px;
+    /* min-width: 420px; */
+    margin: 0 auto;
+    padding: 120px 40px;
 
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-div.circle{
+div.beer::before {
+    content:attr(data-key);
     position: absolute;
     top: -20px;
     left: -20px;
@@ -91,8 +100,9 @@ div.circle{
 div.beer{
     position: relative;
 
-    width: 400px;
+    /* width: calc(100% - 80px); */
     height: 250px;
+    flex-basis: 400px;
     
     background-color: var(--secondary);
     
@@ -185,7 +195,7 @@ div.beer{
 
     .beers .beer{
         
-        width: calc(100% - 80px);
+        /* width: calc(100% - 80px); */
     }
 
 }
