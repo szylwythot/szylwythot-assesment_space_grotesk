@@ -133,7 +133,6 @@ div.beer{
 
     background-color: var(--primary);
 
-    padding: 10px;
     border: solid var(--secondary) 2px;
 
     /* font-size: 14px; */
@@ -146,7 +145,7 @@ div.beer{
 
 }
 
-.beer .button div{
+.beer .button div.details-text{
     position: absolute;
     left: 50%;
     top:50%;
@@ -155,16 +154,14 @@ div.beer{
     font-size: 14px;
 }
 
-.beer .button span.material-icons{
-    display: block;
+.beer .button span{
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 50%;
-    transform: translate(-50%, -50%);
-    
-    /* width: 40px; */
+    transform: translateY(-50%);
     
     font-size: 36px;
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 900px) {
