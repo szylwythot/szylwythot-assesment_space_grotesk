@@ -16,7 +16,7 @@ function cardComponent({title, sub, text}, buttonText, key){
             </div>
             <div class="button">
                 <div>${buttonText}</div>
-                <span class="material-icons">arrow forward</span>
+                <span class="material-icons">arrow_forward</span><!--e5c8-->
             </div>
         </div>
     `;
