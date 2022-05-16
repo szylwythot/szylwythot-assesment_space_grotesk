@@ -109,7 +109,10 @@ div.beer{
 }
 
 .beer .details{
-    
+    height: 68px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
     border-top: var(--primary) 1px solid;
 }
 
