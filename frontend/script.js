@@ -62,7 +62,7 @@ function fetchBurnedBeers(){
 }
 
 async function fetchBeers(){
-    const res = await fetch("data/data.json");
+    const res = await fetch("./frontend/data/data.json");
     const resJson = await res.json(res);
     console.log(resJson);
     return resJson;
@@ -85,7 +85,7 @@ function cardComponent({title, sub, text}, buttonText, key){
     `;
 }
 
-function beers(beers, buttonText){
+function beersComponent(beers, buttonText){
     return `
         <section class="beers">
             ${beers.map((beer, index) => cardComponent(beer, buttonText, index+1)).join('')}
@@ -105,14 +105,17 @@ function header(){
 }
 
 async function loadEvent(){
-    // const citiesData = await fetch("cities/city.list.json");
-    // const beersData = await fetchBeers();
 
-    const beersData = fetchBurnedBeers();
+    const beersData = await fetchBeers();
+    console.log(beersData);
+
+    // console.log(beers);
+
+    // const beersData = fetchBurnedBeers();
 
     const rootElement = document.getElementById("root");
     rootElement.insertAdjacentHTML('beforeend', header());
-    rootElement.insertAdjacentHTML('beforeend', beers(beersData.cards, beersData.button));
+    rootElement.insertAdjacentHTML('beforeend', beersComponent(beersData.cards, beersData.button));
 
 }
 
