@@ -60,6 +60,8 @@ section.beers{
     transform: translateX(-50%);
     
     max-width: 1200px;
+    min-width: 420px;
+
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
@@ -88,6 +90,7 @@ div.circle{
 
 div.beer{
     position: relative;
+
     width: 400px;
     height: 250px;
     
@@ -174,6 +177,15 @@ div.beer{
 
     section.beers{
         max-width: 800px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .beers .beer{
+        
+        width: calc(100% - 80px);
     }
 
 }
