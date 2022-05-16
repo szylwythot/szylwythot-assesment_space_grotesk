@@ -48,7 +48,7 @@ header button {
     transform: translateY(-50%);
 }
 
-header button h2 span{ /*need to change font size*/
+header button h2 span.material-icons{ /*need to change font size*/
     align-self: flex-end;
     font-size: 36px;
 }
